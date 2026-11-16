@@ -177,7 +177,7 @@ async function renderHeader() {
   header.className = "site-header";
   header.innerHTML = `
     <div class="container nav">
-      <a class="logo" href="index.html">Yadawi<span>يدوي</span></a>
+      <a class="logo" href="index.html">Yadawi</a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">☰</button>
       <nav class="nav-links" id="nav-links">
         <a href="index.html"${active("index.html")}>Home</a>

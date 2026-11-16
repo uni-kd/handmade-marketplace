@@ -2,7 +2,7 @@
 
 INT424 E-Commerce final project (Project 3: Handmade Products Marketplace), Ajman University.
 
-Yadawi (يدوي, "handmade" in Arabic) is an online marketplace where customers in the UAE buy handmade jewelry, decorations, candles, accessories and gifts from local artisans.
+Yadawi ("handmade" in Arabic) is an online marketplace where customers in the UAE buy handmade jewelry, decorations, candles, accessories and gifts from local artisans.
 
 - **Live website:** https://uni-kd.github.io/handmade-marketplace/
 - **Repository:** https://github.com/uni-kd/handmade-marketplace
