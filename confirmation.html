@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order confirmed | Yadawi</title>
+  <meta name="description" content="Your order confirmation.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- The header and footer are filled in by js/app.js -->
+  <header id="site-header"></header>
+
+  <main class="container">
+    <div class="card" style="max-width:640px;margin:0 auto">
+      <!-- Filled from the orders and order_items tables -->
+      <div id="confirmation">
+        <p class="muted">Loading your order...</p>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <!-- Supabase library first, then our own scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/app.js"></script>
+  <script src="js/confirmation.js"></script>
+</body>
+</html>

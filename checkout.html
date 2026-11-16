@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Yadawi</title>
+  <meta name="description" content="Complete your order.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- The header and footer are filled in by js/app.js -->
+  <header id="site-header"></header>
+
+  <main class="container">
+    <h1>Checkout</h1>
+    <div id="message"></div>
+    <div class="two-col">
+      <section class="card">
+        <h2>Delivery details</h2>
+        <form id="checkout-form" novalidate>
+          <div class="field">
+            <label for="full-name">Full name</label>
+            <input type="text" id="full-name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="phone">Mobile number</label>
+            <input type="tel" id="phone" autocomplete="tel" placeholder="05X XXX XXXX" required>
+          </div>
+          <div class="field">
+            <label for="address">Delivery address</label>
+            <textarea id="address" rows="3" autocomplete="street-address" placeholder="Building, street, area, emirate" required></textarea>
+          </div>
+          <div class="field">
+            <label>Payment method</label>
+            <label class="check"><input type="radio" name="payment" value="cod" checked> Cash on delivery</label>
+            <p class="muted small">This is a student project. No card details are collected and no real payment is taken.</p>
+          </div>
+          <button class="btn btn-block" type="submit" id="place-order">Place order</button>
+        </form>
+      </section>
+
+      <aside class="card">
+        <h2>Your order</h2>
+        <div id="order-lines"></div>
+        <div class="summary-row"><span>Delivery (UAE)</span><span>Free</span></div>
+        <div class="summary-row total"><span>Total</span><span id="order-total">AED 0.00</span></div>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <!-- Supabase library first, then our own scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/app.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

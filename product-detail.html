@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product | Yadawi</title>
+  <meta name="description" content="Product details, stock and customer reviews.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- The header and footer are filled in by js/app.js -->
+  <header id="site-header"></header>
+
+  <main class="container">
+    <p><a href="products.html">&larr; Back to shop</a></p>
+
+    <!-- Filled from the product table -->
+    <div id="product" class="detail">
+      <p class="muted">Loading product...</p>
+    </div>
+
+    <section class="card" style="margin-top:32px">
+      <h2>Customer reviews</h2>
+      <div id="review-message"></div>
+
+      <!-- Shown only to logged-in customers -->
+      <form id="review-form" class="hidden">
+        <h3 id="review-form-title">Write a review</h3>
+        <div class="field">
+          <label for="rating">Rating</label>
+          <select id="rating" required>
+            <option value="5">5 - Excellent</option>
+            <option value="4">4 - Good</option>
+            <option value="3">3 - Average</option>
+            <option value="2">2 - Poor</option>
+            <option value="1">1 - Bad</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="comment">Your review</label>
+          <textarea id="comment" rows="3" maxlength="500" required></textarea>
+        </div>
+        <button class="btn" type="submit" id="review-submit">Post review</button>
+        <button class="btn btn-outline hidden" type="button" id="review-cancel">Cancel</button>
+      </form>
+      <p id="review-login" class="muted hidden"><a href="login.html">Log in</a> to write a review.</p>
+
+      <div id="reviews"></div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <!-- Supabase library first, then our own scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/app.js"></script>
+  <script src="js/product-detail.js"></script>
+</body>
+</html>
